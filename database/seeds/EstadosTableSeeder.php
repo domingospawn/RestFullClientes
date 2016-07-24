@@ -11,92 +11,44 @@ class EstadosTableSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('estados')->insert([
-          'nome'    => 'Acre',
-          'uf'      => 'AC',
-          'pais_id' => '1',
-      ]);
+      $estados = array(
+        array('Acre', 'AC', 1),
+        array('Alagoas', 'AL', 1),
+        array('Amazonas', 'AM', 1),
+        array('Amapá', 'AP', 1),
+        array('Bahia', 'BA', 1),
+        array('Ceará', 'CE', 1),
+        array('Distrito Federal', 'DF', 1),
+        array('Espírito Santo', 'ES', 1),
+        array('Goiás', 'GO', 1),
+        array('Maranhão', 'MA', 1),
+        array('Minas Gerais', 'MG', 1),
+        array('Mato Grosso do Sul', 'MS', 1),
+        array('Mato Grosso', 'MT', 1),
+        array('Pará', 'PA', 1),
+        array('Paraíba', 'PB', 1),
+        array('Pernambuco', 'PE', 1),
+        array('Piauí', 'PI', 1),
+        array('Paraná', 'PR', 1),
+        array('Rio de Janeiro', 'RJ', 1),
+        array('Rio Grande do Norte', 'RN', 1),
+        array('Rondônia', 'RO', 1),
+        array('Roraima', 'RR', 1),
+        array('Rio Grande do Sul', 'RS', 1),
+        array('Santa Catarina', 'SC', 1),
+        array('Sergipe', 'SE', 1),
+        array('São Paulo', 'SP', 1),
+        array('Tocantins', 'TO', 1),
+      );
 
-      DB::table('estados')->insert([
-          'nome'    => 'Alagoas',
-          'uf'      => 'AL',
-          'pais_id' => '1',
-      ]);
+      foreach($estados as $estado)
+      {
+        DB::table('estados')->insert([
+            'nome'    => $estado[0],
+            'uf'      => $estado[1],
+            'pais_id' => $estado[2],
+        ]);
+      }
 
-      DB::table('estados')->insert([
-          'nome'    => 'Amazonas',
-          'uf'      => 'AM',
-          'pais_id' => '1',
-      ]);
-
-      DB::table('estados')->insert([
-          'nome'    => 'Amapá',
-          'uf'      => 'AP',
-          'pais_id' => '1',
-      ]);
-
-      DB::table('estados')->insert([
-          'nome'    => 'Bahia',
-          'uf'      => 'BA',
-          'pais_id' => '1',
-      ]);
-
-      DB::table('estados')->insert([
-          'nome'    => 'Ceará',
-          'uf'      => 'CE',
-          'pais_id' => '1',
-      ]);
-
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-
-      DB::table('estados')->insert([
-          'nome'    => 'Espírito Santo',
-          'uf'      => 'ES',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
-      DB::table('estados')->insert([
-          'nome'    => 'Distrito Federal',
-          'uf'      => 'DF',
-          'pais_id' => '1',
-      ]);
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Repositories\ClienteRepository;
+use App\Cliente;
 
 class ClienteController extends Controller
 {
@@ -15,7 +16,7 @@ class ClienteController extends Controller
     *
     * @var App\Repositories\ClienteRepository;
     */
-    protected $clienteRepo;
+    protected $Repo;
 
     /**
     * Create the controller
@@ -25,8 +26,9 @@ class ClienteController extends Controller
     */
     public function __construct(ClienteRepository $clientesRepo)
     {
-      $this->clienteRepo = $clientesRepo;
+      $this->Repo = $clientesRepo;
     }
+
 
     /**
      * Display a listing of the resource.
@@ -35,7 +37,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return $this->clienteRepo::all() ;
+        //return $this->clienteRepo::all() ;
+        return $this->Repo->all();
     }
 
     /**

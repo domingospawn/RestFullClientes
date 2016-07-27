@@ -2,14 +2,24 @@
 
 namespace App\Repositories;
 
+use App\Repositories\RepositoryInterface;
 use App\Cliente;
 
-class ClienteRepository
+class ClienteRepository implements RepositoryInterface
 {
+  /**
+  * model
+  *@var Cliente
+  */
+  private $model;
 
-  public funtion all()
+  public function __construct(Cliente $cliente)
   {
-    $clientes = Cliente::all();
-    return $clientes;
+    $this->model = $cliente;
+  }
+
+  public function all()
+  {
+    return $this->model::all();
   }
 }

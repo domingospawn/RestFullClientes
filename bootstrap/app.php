@@ -43,6 +43,22 @@ $app->singleton(
 
 /*
 |--------------------------------------------------------------------------
+| Instâncias personalizadas
+|--------------------------------------------------------------------------
+|
+| instânciar minhas classes
+|
+*/
+
+/**
+*User Repository
+*/
+$app->bind('App\Repositories\ClienteRepository', function ($app){
+  return new App\Repositories\ClienteRepository(new App\Cliente());
+});
+
+/*
+|--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------
 |

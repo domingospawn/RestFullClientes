@@ -11,6 +11,8 @@ class CidadesTableSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('cidades')->truncate();
+
         $cidades = array(
           array("Afonso Cláudio", 8),
           array("Água Doce do Norte", 8),

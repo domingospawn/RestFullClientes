@@ -13,6 +13,8 @@ class ClientesTableSeeder extends Seeder
     public function run()
     {
 
+      DB::table('clientes')->truncate();
+
       for ($i = 1; $i <= 1000; $i++)
       {
         DB::table('clientes')->insert([

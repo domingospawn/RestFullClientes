@@ -11,6 +11,8 @@ class EstadosTableSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('estados')->truncate();
+
       $estados = array(
         array('Acre', 'AC', 1),
         array('Alagoas', 'AL', 1),

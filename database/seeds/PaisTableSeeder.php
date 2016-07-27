@@ -12,6 +12,8 @@ class PaisTableSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('pais')->truncate();
+
       DB::table('pais')->insert([
             'nome' => 'Brasil',
             'sigla' => 'BR',
